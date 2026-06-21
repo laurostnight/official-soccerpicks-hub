@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>信息索引 · 竞猜足球资料整理</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f9fafb;
+      color: #1a1e24;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1.25rem;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* 导航 */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem 2rem;
+      padding: 1.25rem 0 2.5rem;
+      border-bottom: 1px solid #e2e6ec;
+      margin-bottom: 3rem;
+    }
+
+    nav a {
+      color: #3b4252;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 450;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #0066b8;
+    }
+
+    nav .nav-brand {
+      font-weight: 550;
+      color: #1a1e24;
+      border-bottom: 2px solid transparent;
+    }
+
+    /* hero */
+    .hero {
+      text-align: center;
+      padding: 1.5rem 0 3rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 480;
+      letter-spacing: -0.02em;
+      color: #0f141c;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #4e586b;
+      max-width: 560px;
+      margin: 0 auto 1.4rem;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: #eef1f5;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      color: #2e3748;
+    }
+
+    /* 通用小节 */
+    section {
+      margin: 2.8rem 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 480;
+      margin-bottom: 1.4rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e2e6ec;
+      color: #0f141c;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: #1f2937;
+    }
+
+    p, li {
+      color: #2d3746;
+      font-size: 0.97rem;
+    }
+
+    .intro-text {
+      margin-bottom: 0.8rem;
+    }
+
+    /* 三个场景卡片 */
+    .scene-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem 1.8rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.03);
+      border: 1px solid #edf0f5;
+      transition: box-shadow 0.2s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+
+    .scene-card .card-num {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #7b8799;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.6rem;
+    }
+
+    .scene-card p {
+      margin-top: 0.3rem;
+    }
+
+    /* 常见说明 (FAQ 摘要) */
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item strong {
+      font-weight: 520;
+      color: #0f141c;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      margin-left: 0;
+    }
+
+    .link-hint {
+      background: #f2f5f9;
+      border-radius: 12px;
+      padding: 1.2rem 1.6rem;
+      margin: 2.8rem 0 1rem;
+      font-size: 0.96rem;
+      color: #1e293b;
+    }
+
+    .link-hint a {
+      color: #0066b8;
+      text-decoration: none;
+      font-weight: 470;
+      border-bottom: 1px solid #d0d7e2;
+    }
+
+    .link-hint a:hover {
+      border-bottom-color: #0066b8;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: #e2e6ec;
+      margin: 2.5rem 0 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #7b8799;
+      padding: 2.5rem 0 1rem;
+      border-top: 1px solid #e2e6ec;
+      margin-top: 2rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      body {
+        padding: 1.2rem 0.9rem;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .scene-card {
+        padding: 1.2rem;
+      }
+
+      nav {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 顶部导航 -->
+    <nav>
+      <a href="#" class="nav-brand">资料·索引</a>
+      <a href="#intro">整理方向</a>
+      <a href="#scenes">常见场景</a>
+      <a href="#faq">简要说明</a>
+    </nav>
+
+    <!-- hero 核心介绍 -->
+    <header class="hero">
+      <h1>从资料整理到信息索引</h1>
+      <p class="sub">围绕竞猜足球这一主题，把零散的信息点衔接成清晰的线索，方便回顾、比较与理解。</p>
+      <span class="tagline">结构化整理 · 客观参考</span>
+    </header>
+
+    <!-- 介绍段落 -->
+    <section id="intro">
+      <h2>整理思路</h2>
+      <p class="intro-text">对于关注竞猜足球的人来说，碎片化的比分、赛季表现、战术偏好往往难以直接串联。这个页面尝试从资料整理的角度入手，将常见的信息维度归类，让浏览者可以更直观地对照不同来源的数据与趋势。不需要夸张的承诺，只提供一种更清爽的索引方式。</p>
+      <p class="intro-text">所有内容仅供信息参考与学习交流，不构成任何投注建议。如果你希望进一步了解竞猜足球相关的信息整理，可以访问 <a href="https://official-soccerpicks.com" style="color:#0066b8; text-decoration:underline;">竞猜足球</a> 的内容体系，那里有更完整的归档与更新。</p>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <section id="scenes">
+      <h2>三种常见信息场景</h2>
+      <div class="scene-grid">
+        <div class="scene-card">
+          <span class="card-num">场景一</span>
+          <h3>赛季数据对照</h3>
+          <p>将不同联赛、球队的近期战绩、进球分布、主客场差异整理成统一格式，方便在分析时快速横向比较。适合赛前查阅基础背景。</p>
+        </div>
+        <div class="scene-card">
+          <span class="card-num">场景二</span>
+          <h3>历史交锋与趋势</h3>
+          <p>把两支球队过去数次的交手记录、进球时段、红黄牌情况汇总为简洁的列表，帮助理解对赛风格的连续性或变化。</p>
+        </div>
+        <div class="scene-card">
+          <span class="card-num">场景三</span>
+          <h3>资讯归类与阅读</h3>
+          <p>把新闻、教练言论、伤病公告按时间轴或主题分组，减少信息噪音。适合需要快速了解某轮次或某焦点战的整体氛围时使用。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 常见说明 FAQ 摘要 -->
+    <section id="faq">
+      <h2>常见说明</h2>
+      <div class="faq-item">
+        <strong>这些信息可以直接用于决策吗？</strong>
+        <p>不能。资料整理仅提供结构化的背景，任何决策都需要结合个人判断与风险意识。页面内容不预测结果，也不保证准确率。</p>
+      </div>
+      <div class="faq-item">
+        <strong>数据来源可靠吗？</strong>
+        <p>所有公开信息均来自主流体育数据平台与官方统计，但索引本身不存储原始数据，只提供整理后的摘要与链接方向。</p>
+      </div>
+      <div class="faq-item">
+        <strong>页面会频繁更新吗？</strong>
+        <p>内容按季度或重大赛事节点进行修订，保持结构稳定。对于即时的竞猜足球信息，建议直接参考 <a href="https://official-soccerpicks.com">竞猜足球</a> 的最新归档。</p>
+      </div>
+    </section>
+
+    <!-- 自然链接嵌入 + 提示 -->
+    <div class="link-hint">
+      💡 如果你正在寻找一个偏重资料归档与信息索引的切入点，可以试试浏览 <a href="https://official-soccerpicks.com">竞猜足球</a> 的内容方式。那里将同样主题的材料按照赛季与赛事类型做了更细致的分类，适合需要系统性回顾的用户。
+    </div>
+
+    <hr>
+
+    <footer>
+      <p>仅作信息索引与资料整理 · 请理性看待所有体育数据</p>
+    </footer>
+  </div>
+</body>
+</html>
